@@ -4,11 +4,11 @@ import Avatar from '@mui/material/Avatar';
 import Typography from "@mui/material/Typography";
 import { Stack } from "@mui/material";
 import '@fontsource/be-vietnam'
-import storageBig from './/static/images/storageBig.png'
 import Button from '@mui/material/Button';
 import EditIcon from '@mui/icons-material/Edit'
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
+import ServicesOffered from './components/ServicesOffered.tsx';
 
 const theme = createTheme({
   typography: {
@@ -21,7 +21,7 @@ const theme = createTheme({
 
 const itemData = [
   {
-    img: './/static/images/storageSmall1.png',
+    img: './static/images/storageSmall1.png',
   },
   {
     img: './/static/images/storageSmall2.png',
@@ -46,7 +46,7 @@ const App = () => {
         </Grid>
         
         <Stack direction="row" spacing={3}>
-          <Avatar atar src={storageBig} sx={{ width: 712, height: 320 }} variant="rounded"/>
+          <Avatar src='./static/images/storageBig.png' sx={{ width: 712, height: 320 }} variant="rounded"/>
           
           <Box>
             <Grid container rowSpacing={1.2} columnSpacing={1.2}>
@@ -62,6 +62,8 @@ const App = () => {
         <Box>
           <image src></image>
         </Box>
+
+        <ServicesOffered />
         
       </ThemeProvider>
     </Box>
