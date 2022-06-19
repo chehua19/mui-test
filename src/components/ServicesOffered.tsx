@@ -7,11 +7,11 @@ import TableContainer from '@mui/material/TableContainer'
 import Card from '@mui/material/Card';
 import Avatar from '@mui/material/Avatar';
 import Stack from '@mui/material/Stack';
-import { styled } from '@mui/material/styles'
-import servicesData from './Services/servicesData.js'
+import styled from '@mui/material/styles/styled'
+import servicesData from './content/servicesData.js'
 // @ts-ignore
-import Service from './Services/Service.tsx';
-import { CardContent } from "@mui/material";
+import Service from './service/Service.tsx';
+import CardContent from "@mui/material/CardContent";
 
 const CategoryName = styled(Typography)(({ theme }) => ({
     variant: "h6",
