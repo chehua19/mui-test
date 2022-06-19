@@ -3,7 +3,7 @@ import CheckIcon from '@mui/icons-material/Check';
 import Typography from '@mui/material/Typography';
 import TableRow from '@mui/material/TableRow';
 import TableCell from '@mui/material/TableCell';
-import { styled } from '@mui/material/styles';
+import styled from '@mui/material/styles/styled';
 
 type ServiceProps = {
     serviceName: string,
