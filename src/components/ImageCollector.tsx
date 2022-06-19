@@ -26,22 +26,21 @@ const ContainerPhoto = styled(Avatar)(({ theme }) => ({
 }));
 
 const ImageCollector = () => {
-
+    
     return(
-        <Grid container spacing={3}>
-            <Grid item xs={8}>
-                <ContainerPhoto src='./static/images/storageBig.png'/>
-            </Grid>
-            <Grid item xs={4}>
-                <Grid container rowSpacing={1.2} columnSpacing={1.2}>
-                    {photoData.map((item) => (
-                        <Grid item>
-                            <ContainerPhoto src={item.img} />
-                        </Grid>
-                    ))}
-                </Grid>
-            </Grid>
+      <Grid container spacing={3}>
+        <Grid item xs={8}>
+            <ContainerPhoto src='./static/images/storageBig.png'/>
         </Grid>
+            
+        <Grid item container rowSpacing={1.2} columnSpacing={1.2} xs={4}>
+          {photoData.map((item) => (
+            <Grid item>
+              <ContainerPhoto src={item.img} />
+            </Grid>
+        ))}
+        </Grid>
+      </Grid>
     )
 }
 

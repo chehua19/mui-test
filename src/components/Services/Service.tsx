@@ -6,9 +6,9 @@ import TableCell from '@mui/material/TableCell';
 import styled from '@mui/material/styles/styled';
 
 type ServiceProps = {
-    serviceName: string,
-    price: number,
-    active: boolean
+    serviceName?: string;
+    price?: number;
+    active?: boolean;
 };
 
 const TextField = styled(Typography)(({ theme }) => ({
