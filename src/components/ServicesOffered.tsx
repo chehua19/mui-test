@@ -1,17 +1,22 @@
 import React, { useState } from "react";
 import Grid from '@mui/material/Grid';
+import Stack from '@mui/material/Stack';
+
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
-import Typography from "@mui/material/Typography";
 import TableContainer from '@mui/material/TableContainer'
 import Card from '@mui/material/Card';
+import CardContent from "@mui/material/CardContent";
+
+import Typography from "@mui/material/Typography";
 import Avatar from '@mui/material/Avatar';
-import Stack from '@mui/material/Stack';
+
 import styled from '@mui/material/styles/styled'
-import servicesData from './content/servicesData.js'
+
 // @ts-ignore
 import Service from './service/Service.tsx';
-import CardContent from "@mui/material/CardContent";
+
+import servicesData from './content/servicesData.js'
 
 const CategoryName = styled(Typography)(({ theme }) => ({
     variant: "h6",

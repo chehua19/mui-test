@@ -32,8 +32,9 @@ const ContentText = styled(Typography)((theme) => ({
 
 const DetailsCard: React.FC<DetailsCardProp> = (props) => {
     const { phone, website, email } = props;
+
     return(
-        <Card sx={{ backgroundColor: 'rgba(145, 158, 171, 0.08)', boxShadow: '0'}}>
+        <Card sx={{ backgroundColor: 'rgba(145, 158, 171, 0.08)', boxShadow: '0' }}>
             <CardContent>
                 <Grid container>
                     <Grid item xs={4}>

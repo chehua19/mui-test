@@ -10,7 +10,7 @@ import Button from '@mui/material/Button';
 import Chip from "@mui/material/Chip";
 
 import styled from '@mui/material/styles/styled';
-
+import makeStyles from "@mui/styles/makeStyles";
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 
 import ThemeProvider from './theme/index.tsx';
@@ -21,19 +21,34 @@ import UtilButtons from './components/UtilButtons.tsx'
 import ServicesOffered from './components/ServicesOffered.tsx';
 import RequestCard from './components/RequestCard.tsx';
 import DetailsCard from './components/DetailsCard.tsx';
+import HightlightItem from './components/HightlightItem.tsx';
+//import StateMap from './components/StateMap.tsx';
 
 import BussinessData from './components/content/businnesCategory.js';
 import DescriptionData from './components/content/desctiption.js';
 import DetailsData from './components/content/detailsCard.js';
+import HighlightData from './components/content/highlightData.js';
 
-const BlockText = styled(Typography)(() => ({
+const useStyle = makeStyles((theme) => ({
+  mainWrapper: {
+    width: '90%', 
+    maxWidth: 1080
+  },
+  bussinessWrapper: {
+    display: "flex",
+    justifyContent: 'space-around', 
+    flexWrap: "wrap"
+  }
+}))
+
+const BlockText = styled(Typography)((theme) => ({
   fontSize: 17,
   fontWeight: 600,
   marginBottom: 8,
   typography: 'h6'
 }));
 
-const ChipBussiness = styled(Chip)(() => ({
+const ChipBussiness = styled(Chip)((theme) => ({
   fontSize: 14, 
   margin: 5
 }));
@@ -45,9 +60,10 @@ const ContentText = styled(Typography)((theme) => ({
 }));
 
 const App = () => {
+  const classes = useStyle();
   return (
     <ThemeProvider>
-      <Box sx={{ width: '90%', maxWidth: 1080 }}>
+      <Box className={ classes.mainWrapper }>
         <Grid container spacing={3}>
           <Grid item xs={12}>
             <Grid container direction="row" justifyContent="space-between" alignItems="baseline">
@@ -76,7 +92,7 @@ const App = () => {
 
           <Grid item xs={8}>
             <BlockText>Bussiness category</BlockText>
-            <Box sx={{ display: "flex", justifyContent: 'space-around', flexWrap: "wrap"}}>
+            <Box className={ classes.bussinessWrapper }>
               {BussinessData.map((item) => (
                 <ChipBussiness label={ item } />
               ))}
@@ -99,14 +115,22 @@ const App = () => {
 
           <Grid item xs={8}>
             <BlockText>Highlights</BlockText>
-            
+            <Grid container mt={1} spacing={2}>
+              {HighlightData.map((item) => (
+                <Grid item xs={6}>
+                  <HightlightItem name={ item.name } description={ item.desription } imagePath={ item.path } />
+                </Grid>
+              ))}
+            </Grid>
           </Grid>
 
           <Grid item xs={8}>
             <BlockText>Services offered</BlockText>
             <ServicesOffered />
           </Grid>
-          <Grid item xs={4}>
+
+          <Grid item xs={8}>
+            <BlockText>Location</BlockText>
             
           </Grid>
         </Grid>

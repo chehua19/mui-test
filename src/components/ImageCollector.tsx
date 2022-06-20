@@ -30,13 +30,13 @@ const ImageCollector = () => {
     return(
       <Grid container spacing={3}>
         <Grid item xs={8}>
-            <ContainerPhoto src='./static/images/storageBig.png'/>
+            <ContainerPhoto key="" src='./static/images/storageBig.png'/>
         </Grid>
             
         <Grid item container rowSpacing={1.2} columnSpacing={1.2} xs={4}>
           {photoData.map((item) => (
             <Grid item xs={6}>
-              <ContainerPhoto src={item.img} />
+              <ContainerPhoto key={item.img} src={item.img} />
             </Grid>
         ))}
         </Grid>
