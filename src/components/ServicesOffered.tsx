@@ -15,14 +15,13 @@ import CardContent from "@mui/material/CardContent";
 
 const CategoryName = styled(Typography)(({ theme }) => ({
     variant: "h6",
-    fontFamily: "Be Vietnam",
     fontWeight: 600,
     fontSize: 17,
     lineHeight: 1
 }));
 
 const ServicesOffered = () => {
-    const [ showMore, setShowMore ] = useState(false);
+    const [ showMore, setShowMore] = useState(true);
     return(
         <Card sx={{ maxWidth: 712 }}>
             <CardContent>

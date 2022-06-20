@@ -24,18 +24,20 @@ const ButtonRequest = styled(Button)(() => ({
     padding: 11,
     fontSize: 15,
     borderRadius: 2,
-    backgroundColor: "#1890FF"
+    backgroundColor: "#1890FF",
+    variant: "body1",
+    boxShadow: '0px 8px 16px rgba(24, 144, 255, 0.24)'
 }));
 
-
+ 
 const RequestCard = () => {
     return(
-        <Card>
+        <Card sx={{ boxShadow: '0px 0px 2px rgba(145, 158, 171, 0.24), 0px 16px 32px -4px rgba(145, 158, 171, 0.24)' }}>
             <CardContent>
                 <HeadText variant="h6">
                     Request a quote
                 </HeadText>
-                <ContentText variant="body1">
+                <ContentText>
                     Lorem ipsum dolor sit amet, nam sint mucius ea. Sea movet saperet cu, sumo possim assentior his te, probo bonorum id nec
                 </ContentText>
                 <ButtonRequest variant="contained">Request a quote</ButtonRequest>

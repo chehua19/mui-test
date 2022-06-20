@@ -18,7 +18,7 @@ const photoData = [
       img: './static/images/storageSmall4.png',
     }
   ];
-
+  
 const ContainerPhoto = styled(Avatar)(({ theme }) => ({
     width: '100%',
     height: '100%',
@@ -35,7 +35,7 @@ const ImageCollector = () => {
             
         <Grid item container rowSpacing={1.2} columnSpacing={1.2} xs={4}>
           {photoData.map((item) => (
-            <Grid item>
+            <Grid item xs={6}>
               <ContainerPhoto src={item.img} />
             </Grid>
         ))}

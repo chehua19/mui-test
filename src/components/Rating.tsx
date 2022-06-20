@@ -34,7 +34,7 @@ const RatingUser : React.FC<RatingUserProp> = (props) => {
             <Avatar src={ imageSrc } />
             <Stack direction="row" alignItems="center" spacing={0.5}>
                 <Rating value={ ratingValue } size="large" readOnly />
-                <Typography variant="body1" fontSize={14} > { '(' + nFormatter(rewievValue, 2) + ' Rewiew)'} </Typography>
+                <Typography variant="body1" fontSize={14} > { '(' + nFormatter(rewievValue, 2) + ' Review)'} </Typography>
             </Stack>
         </Stack>
     )

@@ -13,6 +13,12 @@ const categorys = [
     "Broker",
     "Warehouse & Distribution",
     "Fulfillment business",
+    "3PL",
+    "Broker",
+    "E-commerce business",
+    "Fulfillment business",
+    "3PL",
+    "Broker"
 ];
     
 export default categorys;
