@@ -22,12 +22,14 @@ import ServicesOffered from './components/ServicesOffered.tsx';
 import RequestCard from './components/RequestCard.tsx';
 import DetailsCard from './components/DetailsCard.tsx';
 import HightlightItem from './components/HightlightItem.tsx';
+import StateMap from "./components/StateMap.tsx";
 //import StateMap from './components/StateMap.tsx';
 
 import BussinessData from './components/content/businnesCategory.js';
 import DescriptionData from './components/content/desctiption.js';
 import DetailsData from './components/content/detailsCard.js';
 import HighlightData from './components/content/highlightData.js';
+
 
 const useStyle = makeStyles((theme) => ({
   mainWrapper: {
@@ -131,7 +133,7 @@ const App = () => {
 
           <Grid item xs={8}>
             <BlockText>Location</BlockText>
-            
+            <StateMap></StateMap>
           </Grid>
         </Grid>
       </Box>
